@@ -127,7 +127,7 @@ function(listw, u, N, T){
 	ubbub<-crossprod(ubb, ub)
 
 	# trwpw<-sum(unlist(listw$weights)^2)
-	trwpw <- sum(as.vector(listw)^2)/T
+	trwpw <- sum(listw@x^2)/T
 	# print(trwpw)
 	G1c<-(1/(N*(T-1)))*rbind(2*uub, 2*ubbub,(uubb+ ubub))	
 	G2c<- (-1/(N*(T-1)))* rbind(ubub,ubbubb, ububb)
